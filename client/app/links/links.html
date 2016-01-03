@@ -6,9 +6,9 @@
       <li><a href='/logout' class='logout'>Logout</a></li>
     </ul>
   </div>
-  <div style="padding:10px;"><input placeholder="filter" ng-model="search"></div>
+  <div style="padding:10px;"><input placeholder="Search By Name" ng-model="search"></div>
   <div id='container'>
-    <ol class='link' ng-repeat="link in data.links | filter:orderBy:visits | filter:search">
+    <ol class='link' ng-repeat="link in data.links | orderBy:'-visits' | filter:search">
       <li ng-class-odd="'odd'" ng-class-even="'even'">
         <img src='/redirect_icon.png'/>
         <div class='info'>
